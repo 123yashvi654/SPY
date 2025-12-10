@@ -5,11 +5,13 @@ const Header = () => {
     <header className="bg-white py-6 px-4 shadow-sm w-full">
   <div className="w-full flex flex-col items-center justify-center ">
     <img
-          src="/SPY-horizontalfinal1.png"
+          // src="/SPY-horizontalfinal1.png"
       // src="/SPY-horizontalfinal1n.png"
       // src="/SPY-horizontal.png"
+      src="SPY-horizontal2.png"
       alt="SPY Logo"
-      className="h-25 object-cover"
+      // className="h-17 object-cover"
+      className="h-[100px] object-contain"
       aria-label="SPY Logo"
     />
   </div>
