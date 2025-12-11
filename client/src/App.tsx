@@ -15,16 +15,19 @@ function App() {
 
   const [travelFormData, setTravelFormData] = useState<TravelFormData | null>(null);
 
-  const handleFormSubmit = async (formData: TravelFormData) => {
-    setTravelFormData(formData);
-    setCurrentStep("loading");
+const handleFormSubmit = async (formData: TravelFormData) => {
+  setTravelFormData(formData);
+  setCurrentStep('loading');
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+  // Optional delay — you can remove this
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
-    const generatedItinerary = generateItinerary(formData);
-    setItinerary(generatedItinerary);
-    setCurrentStep("itinerary");
-  };
+  const generatedItinerary = await generateItinerary(formData);
+
+  setItinerary(generatedItinerary);
+  setCurrentStep('itinerary');
+};
+
 
   const handleDownloadPDF = async () => {
     if (itinerary && travelFormData) {

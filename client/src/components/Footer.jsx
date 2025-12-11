@@ -2,12 +2,6 @@ import React from 'react';
 import { Facebook, Instagram, Linkedin, Youtube, Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
-  // const tourPackages = [
-  //   'Bali Tour Packages', 'Japan Tour Packages', 'Vietnam Tour Packages', 'Malaysia Tour Packages',
-  //   'Thailand Tour Packages', 'Europe Tour Packages', 'Cultural Tour Packages', 'Luxury Tour Packages',
-  //   'Dubai Tour Packages', 'Turkey Tour Packages', 'UAE Tour Packages', 'Singapore Tour Packages',
-  //   'Australia Tour Packages', 'South Korea Tour Packages', 'Honeymoon Tour Packages', 'Adventure Tour Packages'
-  // ];
 
   const footerSections = {
     'Our offerings': [
