@@ -85,8 +85,9 @@ const Footer = () => {
             </div>
           ))} */}
           {/* Contact Information */}
-          <div className="md:col-span-1 flex flex-col justify-between">
-            <div className="bg-purple-100 rounded-lg p-4 mb-4 text-right">
+          
+          <div className="md:col-span-1 flex flex-col justify-right">
+            <div className="bg-purple-100 rounded-lg p-4 mb-4 text-center">
               <div className="text-purple-800 font-semibold text-xs mb-1">Need help? Call us</div>
               <div className="text-purple-900 font-bold text-base">+91-98xxx64641</div>
             </div>
