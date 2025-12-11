@@ -130,7 +130,7 @@
 
 import React from "react";
 import { Download, ArrowLeft } from "lucide-react";
-import { getDestinationImage } from "../utils/destinationImages";
+// import { getDestinationImage } from "../utils/destinationImages";
 import { format, parseISO, differenceInDays } from "date-fns";
 import Button from "../ui/Button";
 import Card from "../ui/Card";
@@ -166,9 +166,10 @@ const ItineraryDisplay = ({ itinerary, formData, onDownloadPDF, onStartOver }) =
         <p className="text-xl mb-6">{days} Days {nights} Nights</p>
 
         <div className="flex gap-4">
-          <Button onClick={onDownloadPDF} className="bg-white text-purple-700 flex gap-2">
+          {/* <Button onClick={onDownloadPDF} className="bg-white text-purple-700 flex gap-2">
             <Download /> Download PDF
-          </Button>
+          </Button> */}
+          
           <Button onClick={onStartOver} className="bg-gray-200 flex gap-2">
             <ArrowLeft /> Start Over
           </Button>
@@ -214,13 +215,18 @@ const ItineraryDisplay = ({ itinerary, formData, onDownloadPDF, onStartOver }) =
             <div className="flex items-center p-6">
 
               {/* Day Image */}
-              <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-lg mr-6">
+              {/* <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-lg mr-6">
                 <img
                   src={getDestinationImage(itinerary.summary.destination)}
                   alt="destination"
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </div> */}
+
+              <div className="w-24 h-24 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 flex items-center justify-center mr-6 text-white text-sm font-semibold shadow-xl animate-pulse">
+  ✈️ Trip
+</div>
+
 
               <div>
                 <h3 className="text-xl font-semibold text-purple-700 mb-2">Day {day.day}</h3>

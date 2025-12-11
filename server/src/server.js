@@ -171,7 +171,7 @@ Rules:
 - Always include: breakfast, sightseeing, local travel, dinner.
 - Activities must have time + cost.
 - Costs must be realistic INR amounts.
-- Use Mumbai-based places since destination is Mumbai.
+- Always use the destination provided in INPUT.
 - Keep the JSON VALID. No comments, no text outside JSON.
     `;
 
@@ -180,7 +180,9 @@ Rules:
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`
+        'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
+        "Referer": "http://localhost:5173", 
+  "X-Title": "Travel Planner"
       },
       body: JSON.stringify({
         model: 'gpt-4o-mini',   // You can switch to gpt-4.1 if needed
@@ -190,7 +192,9 @@ Rules:
     });
 
     const result = await response.json();
-const rawContent = result.choices[0].message.content;
+const rawContent = result.choices?.[0]?.message?.content || "";
+
+
 
 // Clean the AI output to make it valid JSON
 const cleanContent = rawContent
