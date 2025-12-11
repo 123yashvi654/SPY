@@ -39,7 +39,7 @@ function App() {
       <Header />
 
       <main className="container mx-auto px-4 py-8">
-        {currentStep === "form" && <TravelForm onSubmit={handleFormSubmit} />}
+        {currentStep === "form" && <TravelForm onGenerate={handleFormSubmit} />}
 
         {currentStep === "loading" && (
           <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8">
